@@ -4,18 +4,21 @@ const path = require('path')
 var session = require('express-session');
 
 
-
+//creating a new express app
 const app = new express()
+//body-parser makes it possible to have form details in the 'req.body'
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); 
+//this is to render static files
 app.use(express.static('public'))
+//session creates a session when a user logs in and destroys it when the user logs out
 app.use(session({secret: "secret",
 resave: false,
 saveUninitialized: true,
 cookie: { secure: true }}));
 
 
-
+//an empty array to store the users created
 let User = [];
 
 app.get('/', (req, res) => {
@@ -35,6 +38,7 @@ app.post('/register', (req,res) =>{
                  message: "User Already Exists! Login or choose another user id"});
            }
         });
+        //this is where the user is created.
         User.push({
             email: req.body.email,
             name: req.body.name,
@@ -48,7 +52,7 @@ app.post('/register', (req,res) =>{
 
 
 
-
+//creating a server in my localhost. so localhost:3000 will serve the app
 app.listen(3000, () => {
     console.log('App listening on port 3000')
   })
