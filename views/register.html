@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <ul>
+            <li><a class="active" href="/views/index.html">Home</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/views/login.html">Login</a></li>
+          </ul>
+</head>
+<body>
+    <div class="card">
+        <form action="/register" method="POST">
+            <input type="email" placeholder="Enter Email" name="email"> <br>
+            <input type="text" name="name" placeholder="Enter full name"><br>
+            <input type="password" placeholder="Enter password" name="password"><br>
+            <button type="submit" value="submit">Submit</button>
+
+        </form>
+</body>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+</html>
