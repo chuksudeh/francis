@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register</title>
-    <ul>
-            <li><a class="active" href="/views/index.html">Home</a></li>
+          <ul>
+            <li><a class="active" href="/">Home</a></li>
             <li><a href="/register">Register</a></li>
-            <li><a href="/views/login.html">Login</a></li>
+            <li><a href="/login">Login</a></li>
           </ul>
 </head>
 <body>
     <div class="card">
         <form action="/register" method="POST">
+            <label for="email">Email:</label>
             <input type="email" placeholder="Enter Email" name="email"> <br>
+            <label for="email">Fullname:</label>
             <input type="text" name="name" placeholder="Enter full name"><br>
+            <label for="email">Password:</label>
             <input type="password" placeholder="Enter password" name="password"><br>
-            <button type="submit" value="submit">Submit</button>
+            <button type="submit" value="submit">Register</button>
 
         </form>
 </body>
